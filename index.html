@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head><title>First Rung · High school internships</title>
+<meta name="description" content="Find paid and unpaid internships open to high school students, sorted by deadline.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2318203a'/%3E%3Cpath d='M10 6v20M22 6v20M10 21h12M10 14h12' stroke='%23ffe45c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head><body data-page="browse">
+<div class="sample-note">Demo site · every listing here is sample data from fictional organizations.</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M10 6v20M22 6v20M10 21h12" stroke="var(--paper)" stroke-width="3" stroke-linecap="round"/><path d="M10 14h12" stroke="var(--hl)" stroke-width="3" stroke-linecap="round"/></svg>
+      First Rung
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Browse</a>
+      <a href="guide.html">How to apply</a>
+      <a href="tracker.html">My list <span class="count-badge" data-saved-count></span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero">
+    <h1>Your first internship starts with a <span class="mark">deadline</span>.</h1>
+    <p>Internships that actually take high schoolers, with grade limits, pay and hours spelled out so you don’t waste an application.</p>
+    <form class="search" id="search-form" role="search">
+      <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">Search internships</label>
+      <input id="q" type="search" placeholder="Try “lab”, “remote”, “python”…" autocomplete="off">
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <div class="stats" aria-label="Board summary">
+      <div><b id="stat-open">–</b>open now</div>
+      <div><b id="stat-paid">–</b>paid or stipend</div>
+      <div><b id="stat-soon">–</b>close within 30 days</div>
+    </div>
+  </section>
+
+  <section class="wrap board" id="results">
+    <form class="filters" id="filters" data-collapsed="true" aria-label="Filters">
+      <button class="btn ghost toggle-filters" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-body">Show filters</button>
+      <div class="filter-body" id="filter-body">
+        <fieldset>
+          <legend>My grade</legend>
+          <select name="grade" id="f-grade" aria-label="My grade">
+            <option value="">Any grade</option><option value="9">9th</option><option value="10">10th</option><option value="11">11th</option><option value="12">12th</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>When</legend>
+          <label><input type="radio" name="season" value="any" checked id="s-any"> Any time</label>
+          <label><input type="radio" name="season" value="Summer" id="s-summer"> Summer</label>
+          <label><input type="radio" name="season" value="School year" id="s-year"> During school year</label>
+        </fieldset>
+        <fieldset>
+          <legend>Field</legend>
+          <div id="field-opts" style="display:grid;gap:6px"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Format</legend>
+          <label><input type="checkbox" name="mode" value="In person" id="m-in"> In person</label>
+          <label><input type="checkbox" name="mode" value="Hybrid" id="m-hy"> Hybrid</label>
+          <label><input type="checkbox" name="mode" value="Remote" id="m-re"> Remote</label>
+        </fieldset>
+        <fieldset>
+          <legend>Other</legend>
+          <label><input type="checkbox" name="paid" id="f-paid"> Paid or stipend only</label>
+          <label><input type="checkbox" name="hideClosed" id="f-closed" checked> Hide closed</label>
+        </fieldset>
+        <button type="button" class="clear" id="clear">Clear all filters</button>
+      </div>
+    </form>
+
+    <div style="min-width:0">
+      <div class="results-head">
+        <h2 id="result-count" aria-live="polite">Internships</h2>
+        <label style="font-size:.85rem;color:var(--ink-2)">Sort by
+          <select id="sort">
+            <option value="deadline">Deadline (soonest)</option>
+            <option value="pay">Pay (highest)</option>
+            <option value="hours">Hours (fewest)</option>
+          </select>
+        </label>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot"><div class="wrap"><span>First Rung · a sample internship board for high schoolers</span><span>Saved items stay in your browser only.</span></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>

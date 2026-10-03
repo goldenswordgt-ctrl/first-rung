@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><title>My list · First Rung</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2318203a'/%3E%3Cpath d='M10 6v20M22 6v20M10 21h12M10 14h12' stroke='%23ffe45c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head><body data-page="tracker">
+<div class="sample-note">Demo site · every listing here is sample data from fictional organizations.</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M10 6v20M22 6v20M10 21h12" stroke="var(--paper)" stroke-width="3" stroke-linecap="round"/><path d="M10 14h12" stroke="var(--hl)" stroke-width="3" stroke-linecap="round"/></svg>
+      First Rung
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Browse</a>
+      <a href="guide.html">How to apply</a>
+      <a href="tracker.html" aria-current="page">My list <span class="count-badge" data-saved-count></span></a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero" style="padding-bottom:20px">
+    <h1 style="font-size:clamp(1.9rem,4vw,2.8rem)">My <span class="mark">applications</span></h1>
+    <p>Move each internship along as you apply. Everything here is stored in this browser, so nobody else sees it.</p>
+  </section>
+  <div class="empty" id="tracker-empty" hidden style="margin-bottom:72px">
+    <h3>Your list is empty</h3>
+    <p>Tap the bookmark on any internship to save it here.</p>
+    <a class="btn" href="index.html">Browse internships</a>
+  </div>
+  <div class="tracker" id="tracker"></div>
+</main>
+<footer class="site-foot"><div class="wrap"><span>First Rung · a sample internship board for high schoolers</span><span>Saved items stay in your browser only.</span></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>
